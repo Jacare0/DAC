@@ -4,15 +4,15 @@ public class EnderecoM {
     private String Rua;
     private int NumCasa;
     private String bairro;
-    private String cpf;
+    private String CEP;
     private String Cidade;  
     private String Estado;
 
-    public EnderecoM(String Rua, int NumCasa, String bairro, String cpf, String Cidade, String Estado) {
+    public EnderecoM(String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
         this.Rua = Rua;
         this.NumCasa = NumCasa;
         this.bairro = bairro;
-        this.cpf = cpf;
+        this.CEP = CEP;
         this.Cidade = Cidade;
         this.Estado = Estado;
     }
@@ -41,12 +41,12 @@ public class EnderecoM {
         this.bairro = bairro;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCEP() {
+        return CEP;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
     }
 
     public String getCidade() {
@@ -65,5 +65,6 @@ public class EnderecoM {
         this.Estado = Estado;
     }
 
+    
     
 }

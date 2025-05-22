@@ -8,6 +8,6 @@ package Controle;
  *
  * @author arthu
  */
-public class GeralC {
+public class FuncionariosC {
     
 }
