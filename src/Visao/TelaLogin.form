@@ -164,7 +164,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Consultorio de Acupuntura "/>
+        <Property name="text" type="java.lang.String" value="Cl&#xed;nica Equilibrio Natural"/>
       </Properties>
     </Component>
   </SubComponents>
