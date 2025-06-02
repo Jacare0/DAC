@@ -37,4 +37,17 @@ public class EnderecoC {
             e.printStackTrace();
         }
     }
+    
+    public ResultSet BuscaEndereco(){
+        try{
+            dao.conexao();
+            String SQL = "select * from endereco";
+            Resultado = dao.getStatement().executeQuery(SQL);
+            dao.desconecta();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return Resultado;
+    }
 }
