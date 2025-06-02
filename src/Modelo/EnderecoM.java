@@ -1,5 +1,12 @@
 package Modelo;
 
+/**
+ * Esta classe serve como modelo para o Endereço onde foi criado
+ * um construtor, getter e setter para Rua, NumCasa,Bairro,CEP, Cidade e Estado;
+ * @author arthur Fernandes Castanheira
+ * @since data 2/06/2025
+ * @version v1
+ */
 public class EnderecoM {
     private String Rua;
     private int NumCasa;
