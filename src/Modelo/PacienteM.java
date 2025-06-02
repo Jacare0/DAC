@@ -1,6 +1,12 @@
 
 package Modelo;
-
+/**
+ * modelo de paciente, usando apenas a base de dados pessoais
+ * apenas para um cadastro do paciente
+ * @author Arthur Fernandes Castanheira
+ * @version v1
+ * @since 02/06/2025
+ */
 
 public class PacienteM extends DadosPessoaisM{
 

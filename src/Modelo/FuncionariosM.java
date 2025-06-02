@@ -1,6 +1,11 @@
 
 package Modelo;
-
+/**
+ * Modelo para Funcionarios com extends em dadosPessoais
+ * @author arthu
+ * @since 02/06/2025
+ * @version v1
+ */
 
 public class FuncionariosM extends DadosPessoaisM{
     private String DataContratacaoFunc;

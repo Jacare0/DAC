@@ -1,6 +1,11 @@
 
 package Modelo;
-
+/**
+ * Modelo para os Dados pessoais com Extends no endereço.
+ * @author arthur fernandes castanheira
+ * @version v1 
+ * @since 02/06/2025
+ */
 public class DadosPessoaisM extends EnderecoM{
     private String Nome;
     private String CPF;
