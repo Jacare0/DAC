@@ -6,7 +6,9 @@
             <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Controle/ConsultaC.java</file>
             <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Controle/DadosPessoaisC.java</file>
             <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Controle/Database.java</file>
-            <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Visao/TelaLogin.java</file>
+            <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Visao/TelaCadastroLogin.java</file>
+            <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Visao/TelaInicialLogin.java</file>
+            <file>file:/C:/Users/alexa/OneDrive/Documentos/NetBeansProjects/DAC/src/Visao/TelaSecretario.java</file>
         </group>
     </open-files>
 </project-private>
