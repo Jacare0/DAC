@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import Modelo.EnderecoM;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 /**
  * Esta Classe serve para conter os metodos basicos para integrar o indereco com
  * o Banco de dados, sendo as funçoes Insert, Update, Delete e Select.
@@ -31,7 +32,6 @@ public class EnderecoC {
             dao.conexao();
             String SQL = "insert into ENDERECO values('"+obj.getRua()+"',"+obj.getNumCasa()+",'"+obj.getBairro()+"','"+obj.getCEP()+"', '"+obj.getCidade()+"', '"+obj.getEstado()+"') ";
             dao.getStatement().execute(SQL);
-            
             dao.desconecta();
         }catch(Exception e){
             e.printStackTrace();
@@ -72,7 +72,7 @@ public class EnderecoC {
     public void DeletaEndereco(int NumCasa, String CEP){
         try{
             dao.conexao();
-            String SQL = "delete from endereco where numero= "+NumCasa+" and CEP = "+CEP+"";
+            String SQL = "delete from endereco where numero= "+NumCasa+" and CEP = '"+CEP+"'";
             dao.getStatement().execute(SQL);
             dao.desconecta();
             
@@ -101,7 +101,7 @@ public class EnderecoC {
     public void AtualizaValorProduto(int NumCasa,String CEP, String ruaNova,int NumNovo, String BairroNovo, String CEPnovo, String CidadeNova, String EstadoNovo){
         try{
             dao.conexao();
-            String SQL = "update endereco set rua="+ruaNova+",numero ="+NumNovo+",bairro ="+BairroNovo+", CEP = "+CEPnovo+", cidade = "+CidadeNova+", estado = "+EstadoNovo+" where numero ="+NumCasa+"and CEP = "+CEP+"";
+            String SQL = "update endereco set rua="+ruaNova+",numero ="+NumNovo+",bairro ='"+BairroNovo+"', CEP = '"+CEPnovo+"', cidade = '"+CidadeNova+"', estado = '"+EstadoNovo+"' where numero ="+NumCasa+"and CEP = '"+CEP+"'";
             dao.getStatement().executeUpdate(SQL);
             dao.desconecta();
         }catch(Exception erro){
@@ -121,7 +121,7 @@ public class EnderecoC {
     public ResultSet BuscaEndereco(String cep, int numCasa) {
     try {
         dao.conexao();
-        String SQL = "SELECT * FROM endereco WHERE cep ="+cep+" AND numCasa ="+numCasa+"";
+        String SQL = "SELECT * FROM endereco WHERE cep ='"+cep+"' AND numCasa ="+numCasa+"";
         Resultado = dao.getStatement().executeQuery(SQL);
         dao.desconecta();
     } catch (Exception e) {
