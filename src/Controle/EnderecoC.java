@@ -101,7 +101,7 @@ public class EnderecoC {
     public void AtualizaValorProduto(int NumCasa,String CEP, String ruaNova,int NumNovo, String BairroNovo, String CEPnovo, String CidadeNova, String EstadoNovo){
         try{
             dao.conexao();
-            String SQL = "update endereco set rua="+ruaNova+",numero ="+NumNovo+",bairro ='"+BairroNovo+"', CEP = '"+CEPnovo+"', cidade = '"+CidadeNova+"', estado = '"+EstadoNovo+"' where numero ="+NumCasa+"and CEP = '"+CEP+"'";
+            String SQL = "update endereco set rua='"+ruaNova+"',numero ="+NumNovo+",bairro ='"+BairroNovo+"', CEP = '"+CEPnovo+"', cidade = '"+CidadeNova+"', estado = '"+EstadoNovo+"' where numero ="+NumCasa+"and CEP = '"+CEP+"'";
             dao.getStatement().executeUpdate(SQL);
             dao.desconecta();
         }catch(Exception erro){

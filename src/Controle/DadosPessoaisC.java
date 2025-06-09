@@ -35,7 +35,7 @@ public class DadosPessoaisC{
             
             if(!Resultado.next()){
                 
-            String SQL = "insert into dadospessoais values('"+obj.getNome()+"',' "+obj.getCPF()+"',"+obj.getIdade()+",'"+obj.getSexo()+"', '"+obj.getDataNascimento()+"', "+obj.getTelefone()+", '"+obj.getEmail()+"') ";
+            String SQL = "insert into dadospessoais values('"+obj.getNome()+"',' "+obj.getCPF()+"',"+obj.getIdade()+",'"+obj.getSexo()+"', '"+obj.getDataNascimento()+"', '"+obj.getTelefone()+"', '"+obj.getEmail()+"') ";
             dao.getStatement().execute(SQL);
             } else{
                 System.out.println("Endereço ja cadastrado");
@@ -111,6 +111,32 @@ public class DadosPessoaisC{
         }
         
     }
+       
+        
+        /**
+         * Função para conectar no bando de dados e atualizar os dados pessoais apos o cpf 
+         * ser passado como parametro, atualiza os campos possiveis e depois desconecta do 
+         * banco de dados
+         * @autor Arthur Fernandes Castanheira
+         * @since 04/06/2025
+         * @version 1
+         * @param cpf tipo String - passado como parametro de busca
+         * @param NovoNome tipo String 
+         * @param NovaIdade tipo Int 
+         * @param NovoSexo tipo String
+         * @param NovoTelefone tipo String 
+         * @param NovoEmail tipo String
+         */
+        public void AtualizaDadosPessoais(String cpf, String NovoNome, int NovaIdade, String NovoSexo, String NovoTelefone, String NovoEmail){
+        try{
+            dao.conexao();
+            String SQL = "update dadospessoais set nome = '"+NovoNome+"', idade = "+NovaIdade+", sexo = '"+NovoSexo+"', telefone = '"+NovoTelefone+"', email = '"+NovoEmail+"' where CPF = '"+cpf+"'";
+            dao.getStatement().executeUpdate(SQL);
+            dao.desconecta();
+        }catch(Exception erro){
+            erro.printStackTrace();
+        }
+    }    
         
     
 }
