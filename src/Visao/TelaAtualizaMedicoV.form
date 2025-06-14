@@ -231,7 +231,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace pref="25" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -242,7 +242,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="20" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Atualizar Funcion&#xe1;rio"/>
+        <Property name="text" type="java.lang.String" value="Atualizar M&#xe9;dico"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLIDBusca">
