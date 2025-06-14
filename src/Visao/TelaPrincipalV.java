@@ -8,12 +8,12 @@ package Visao;
  *
  * @author alexa
  */
-public class TelaSecretario extends javax.swing.JInternalFrame {
+public class TelaPrincipalV extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaSecretario
      */
-    public TelaSecretario() {
+    public TelaPrincipalV() {
         initComponents();
     }
 
@@ -28,21 +28,26 @@ public class TelaSecretario extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
         jMenuItem17 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -54,22 +59,6 @@ public class TelaSecretario extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 377, Short.MAX_VALUE)
         );
-
-        jMenu1.setText("Pacientes");
-
-        jMenuItem3.setText("Cadastrar paciente");
-        jMenu1.add(jMenuItem3);
-
-        jMenuItem4.setText("Atualizar paciente");
-        jMenu1.add(jMenuItem4);
-
-        jMenuItem5.setText("Remover paciente");
-        jMenu1.add(jMenuItem5);
-
-        jMenuItem6.setText("Consultar paciente");
-        jMenu1.add(jMenuItem6);
-
-        jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Consultas");
 
@@ -87,12 +76,28 @@ public class TelaSecretario extends javax.swing.JInternalFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu1.setText("Pacientes");
+
+        jMenuItem3.setText("Cadastrar paciente");
+        jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setText("Atualizar paciente");
+        jMenu1.add(jMenuItem4);
+
+        jMenuItem5.setText("Remover paciente");
+        jMenu1.add(jMenuItem5);
+
+        jMenuItem6.setText("Consultar paciente");
+        jMenu1.add(jMenuItem6);
+
+        jMenuBar1.add(jMenu1);
+
         jMenu5.setText("Médicos");
 
         jMenuItem14.setText("Cadastrar médico");
         jMenu5.add(jMenuItem14);
 
-        jMenuItem15.setText("Atualiza médico");
+        jMenuItem15.setText("Atualizar médico");
         jMenu5.add(jMenuItem15);
 
         jMenuItem16.setText("Remove médico");
@@ -102,6 +107,22 @@ public class TelaSecretario extends javax.swing.JInternalFrame {
         jMenu5.add(jMenuItem17);
 
         jMenuBar1.add(jMenu5);
+
+        jMenu6.setText("Funcionários");
+
+        jMenuItem18.setText("Cadastrar funcionário");
+        jMenu6.add(jMenuItem18);
+
+        jMenuItem19.setText("Atualizar funcionário");
+        jMenu6.add(jMenuItem19);
+
+        jMenuItem20.setText("Remover funcionário");
+        jMenu6.add(jMenuItem20);
+
+        jMenuItem21.setText("Buscar funcionário");
+        jMenu6.add(jMenuItem21);
+
+        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -126,6 +147,7 @@ public class TelaSecretario extends javax.swing.JInternalFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
@@ -134,6 +156,10 @@ public class TelaSecretario extends javax.swing.JInternalFrame {
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

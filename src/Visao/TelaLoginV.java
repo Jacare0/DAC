@@ -7,12 +7,12 @@ package Visao;
  *
  * @author ra189763
  */
-public class TelaCadastroLogin extends javax.swing.JInternalFrame {
+public class TelaLoginV extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TelaLogin
      */
-    public TelaCadastroLogin() {
+    public TelaLoginV() {
         initComponents();
     }
 
@@ -32,8 +32,8 @@ public class TelaCadastroLogin extends javax.swing.JInternalFrame {
         jPFSenha = new javax.swing.JPasswordField();
         jLTipo = new javax.swing.JLabel();
         jCBTipo = new javax.swing.JComboBox<>();
-        jBEntrar = new javax.swing.JButton();
         jBCadastrar = new javax.swing.JButton();
+        jBEntrar = new javax.swing.JButton();
 
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLTitulo.setText("Clínica Equilibrio Natural");
@@ -51,11 +51,11 @@ public class TelaCadastroLogin extends javax.swing.JInternalFrame {
         jCBTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "S", "M" }));
         jCBTipo.setToolTipText("");
 
-        jBEntrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jBEntrar.setText("Entrar");
-
         jBCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jBCadastrar.setText("Cadastrar");
+
+        jBEntrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBEntrar.setText("Entrar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
