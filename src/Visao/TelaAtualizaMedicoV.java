@@ -120,30 +120,13 @@ public class TelaAtualizaMedicoV extends javax.swing.JInternalFrame {
         jLCRM.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLCRM.setText("CRM:");
 
-        jTCRM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTCRMActionPerformed(evt);
-            }
-        });
-
         jLEspec.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLEspec.setText("Especialidade:");
-
-        jTEspec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTEspecActionPerformed(evt);
-            }
-        });
 
         jLValorCons.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLValorCons.setText("Valor da Consulta:");
 
         jBAtualizar.setText("Atualizar");
-        jBAtualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBAtualizarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,7 +190,7 @@ public class TelaAtualizaMedicoV extends javax.swing.JInternalFrame {
                                         .addComponent(jLEstados)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jCBEstados, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLEmpresa)
@@ -227,7 +210,7 @@ public class TelaAtualizaMedicoV extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jBAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(21, 21, 21))))
+                        .addGap(32, 32, 32))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,23 +293,11 @@ public class TelaAtualizaMedicoV extends javax.swing.JInternalFrame {
                             .addComponent(jLEmail)
                             .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBAtualizar))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAtualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBAtualizarActionPerformed
-
-    private void jTEspecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTEspecActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTEspecActionPerformed
-
-    private void jTCRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCRMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTCRMActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

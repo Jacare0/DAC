@@ -92,7 +92,7 @@
                                       <Component id="jCBEstados" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="37" max="32767" attributes="0"/>
+                              <EmptySpace pref="36" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                       <Component id="jLEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -121,7 +121,7 @@
                               <Component id="jBAtualizar" min="-2" pref="230" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -231,7 +231,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="25" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -444,9 +444,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTCRM">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCRMActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLEspec">
       <Properties>
@@ -457,9 +454,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTEspec">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTEspecActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLValorCons">
       <Properties>
@@ -475,9 +469,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Atualizar"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAtualizarActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>

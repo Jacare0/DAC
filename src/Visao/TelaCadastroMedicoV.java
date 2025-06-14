@@ -116,30 +116,13 @@ public class TelaCadastroMedicoV extends javax.swing.JInternalFrame {
         jLCRM.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLCRM.setText("CRM:");
 
-        jTCRM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTCRMActionPerformed(evt);
-            }
-        });
-
         jLEspec.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLEspec.setText("Especialidade:");
-
-        jTEspec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTEspecActionPerformed(evt);
-            }
-        });
 
         jLValorCons.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLValorCons.setText("Valor da Consulta:");
 
         jBCadastrar.setText("Cadastrar");
-        jBCadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCadastrarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,7 +196,7 @@ public class TelaCadastroMedicoV extends javax.swing.JInternalFrame {
                                 .addComponent(jTCRM, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(2, 2, 2))
                             .addComponent(jBCadastrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,8 +238,7 @@ public class TelaCadastroMedicoV extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLEmail)
                             .addComponent(jTEmal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBCadastrar))
-                        .addContainerGap(24, Short.MAX_VALUE))
+                            .addComponent(jBCadastrar)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLCEP)
@@ -282,24 +264,12 @@ public class TelaCadastroMedicoV extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLEstados)
-                            .addComponent(jCBEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jCBEstados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBCadastrarActionPerformed
-
-    private void jTCRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCRMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTCRMActionPerformed
-
-    private void jTEspecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTEspecActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTEspecActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

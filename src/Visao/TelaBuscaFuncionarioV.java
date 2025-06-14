@@ -43,32 +43,12 @@ public class TelaBuscaFuncionarioV extends javax.swing.JInternalFrame {
         jLIDBusca.setText("ID do Funcionário:");
 
         jBIDDadosEmpresa.setText("Dados Empresa");
-        jBIDDadosEmpresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBIDDadosEmpresaActionPerformed(evt);
-            }
-        });
 
         jBIDDadosPessoais.setText("Dados Pessoais");
-        jBIDDadosPessoais.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBIDDadosPessoaisActionPerformed(evt);
-            }
-        });
 
         jBIDEndereco.setText("Endereço");
-        jBIDEndereco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBIDEnderecoActionPerformed(evt);
-            }
-        });
 
         jBBuscaTodos.setText("Todos Funcionários");
-        jBBuscaTodos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBBuscaTodosActionPerformed(evt);
-            }
-        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -79,7 +59,7 @@ public class TelaBuscaFuncionarioV extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
                     .addComponent(jLTitulo)
@@ -96,12 +76,12 @@ public class TelaBuscaFuncionarioV extends javax.swing.JInternalFrame {
                                 .addComponent(jBIDDadosPessoais, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jBIDEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLTitulo)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -114,27 +94,11 @@ public class TelaBuscaFuncionarioV extends javax.swing.JInternalFrame {
                 .addComponent(jBBuscaTodos)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBIDDadosPessoaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIDDadosPessoaisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBIDDadosPessoaisActionPerformed
-
-    private void jBIDEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIDEnderecoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBIDEnderecoActionPerformed
-
-    private void jBIDDadosEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIDDadosEmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBIDDadosEmpresaActionPerformed
-
-    private void jBBuscaTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscaTodosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBBuscaTodosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

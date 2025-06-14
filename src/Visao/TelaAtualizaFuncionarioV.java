@@ -122,11 +122,6 @@ public class TelaAtualizaFuncionarioV extends javax.swing.JInternalFrame {
         jLFunc.setText("Função:");
 
         jBAtualizar.setText("Atualizar");
-        jBAtualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBAtualizarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -280,15 +275,11 @@ public class TelaAtualizaFuncionarioV extends javax.swing.JInternalFrame {
                             .addComponent(jLEmail)
                             .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBAtualizar))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAtualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBAtualizarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
