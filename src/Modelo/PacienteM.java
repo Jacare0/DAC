@@ -1,7 +1,7 @@
 
 package Modelo;
 /**
- * modelo de paciente, usando apenas a base de dados pessoais
+ * Modelo de paciente, usando apenas a base de dados pessoais
  * apenas para um cadastro do paciente
  * @author Arthur Fernandes Castanheira
  * @version v1

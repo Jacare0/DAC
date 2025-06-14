@@ -1,7 +1,7 @@
 
 package Modelo;
 /**
- * modelo para a tela de login
+ * Modelo para a tela de login
  * @author Arthur Fernandes Castanheira
  * @since 02/06/2025
  * @version v1
