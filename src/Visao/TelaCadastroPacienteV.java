@@ -26,54 +26,37 @@ public class TelaCadastroPacienteV extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLTitulo = new javax.swing.JLabel();
+        jLDadosPessoais = new javax.swing.JLabel();
+        jLNome = new javax.swing.JLabel();
+        jTNome = new javax.swing.JTextField();
+        jLCPF = new javax.swing.JLabel();
+        jTCPF = new javax.swing.JTextField();
+        jLIdade = new javax.swing.JLabel();
         jTIdade = new javax.swing.JTextField();
-        jLEndereco = new javax.swing.JLabel();
         jLSexo = new javax.swing.JLabel();
-        jLCEP = new javax.swing.JLabel();
         jTSexo = new javax.swing.JTextField();
+        jLDataNasc = new javax.swing.JLabel();
+        jTDataNasc = new javax.swing.JTextField();
+        jLTel = new javax.swing.JLabel();
+        jTTel = new javax.swing.JTextField();
+        jLEmail = new javax.swing.JLabel();
+        jTEmal = new javax.swing.JTextField();
+        jLEndereco = new javax.swing.JLabel();
+        jLCEP = new javax.swing.JLabel();
         jTCEP = new javax.swing.JTextField();
         jLRua = new javax.swing.JLabel();
         jTRua = new javax.swing.JTextField();
-        jLDataNasc = new javax.swing.JLabel();
         jLNum = new javax.swing.JLabel();
-        jBCadastrar = new javax.swing.JButton();
-        jLTitulo = new javax.swing.JLabel();
-        jTDataNasc = new javax.swing.JTextField();
         jTNum = new javax.swing.JTextField();
-        jLDadosPessoais = new javax.swing.JLabel();
-        jLTel = new javax.swing.JLabel();
-        jTTel = new javax.swing.JTextField();
         jLCidade = new javax.swing.JLabel();
-        jLEmail = new javax.swing.JLabel();
-        jLNome = new javax.swing.JLabel();
-        jTEmal = new javax.swing.JTextField();
         jTCidade = new javax.swing.JTextField();
-        jTNome = new javax.swing.JTextField();
         jLEstados = new javax.swing.JLabel();
-        jLCPF = new javax.swing.JLabel();
         jCBEstados = new javax.swing.JComboBox<>();
-        jTCPF = new javax.swing.JTextField();
-        jLIdade = new javax.swing.JLabel();
+        jBCadastrar = new javax.swing.JButton();
 
-        jLEndereco.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLEndereco.setText("Endereço");
-
-        jLSexo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLSexo.setText("Sexo:");
-
-        jLCEP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLCEP.setText("CEP:");
-
-        jLRua.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLRua.setText("Rua:");
-
-        jLDataNasc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLDataNasc.setText("Data de Nascimento:");
-
-        jLNum.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLNum.setText("Nº:");
-
-        jBCadastrar.setText("Cadastrar");
+        setClosable(true);
+        setIconifiable(true);
 
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLTitulo.setText("Cadastrar Paciente");
@@ -81,28 +64,48 @@ public class TelaCadastroPacienteV extends javax.swing.JInternalFrame {
         jLDadosPessoais.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLDadosPessoais.setText("Dados Pessoais");
 
-        jLTel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLTel.setText("Telefone:");
-
-        jLCidade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLCidade.setText("Cidade:");
-
-        jLEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLEmail.setText("Email:");
-
         jLNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLNome.setText("Nome:");
-
-        jLEstados.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLEstados.setText("Estado:");
 
         jLCPF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLCPF.setText("CPF:");
 
-        jCBEstados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
-
         jLIdade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLIdade.setText("Idade:");
+
+        jLSexo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLSexo.setText("Sexo:");
+
+        jLDataNasc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLDataNasc.setText("Data de Nascimento:");
+
+        jLTel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLTel.setText("Telefone:");
+
+        jLEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLEmail.setText("Email:");
+
+        jLEndereco.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLEndereco.setText("Endereço");
+
+        jLCEP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLCEP.setText("CEP:");
+
+        jLRua.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLRua.setText("Rua:");
+
+        jLNum.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLNum.setText("Nº:");
+
+        jLCidade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLCidade.setText("Cidade:");
+
+        jLEstados.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLEstados.setText("Estado:");
+
+        jCBEstados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
+
+        jBCadastrar.setText("Cadastrar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

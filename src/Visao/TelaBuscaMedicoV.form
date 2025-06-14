@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="closable" type="boolean" value="true"/>
+    <Property name="iconifiable" type="boolean" value="true"/>
+  </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
@@ -22,23 +26,23 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLBotoes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jBIDDadosEmpresa" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jBIDDadosPessoais" min="-2" pref="122" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jBIDEndereco" min="-2" pref="94" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="jLTitulo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLIDBusca" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jTIDRemove" min="-2" pref="44" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jBIDDadosEmpresa" min="-2" pref="112" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jBBuscaTodos" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jBIDDadosPessoais" min="-2" pref="122" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jBIDEndereco" min="-2" pref="94" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jTIDBusca" min="-2" pref="113" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jBBuscaTodos" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="26" max="32767" attributes="0"/>
@@ -50,19 +54,22 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="jLTitulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLIDBusca" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTIDRemove" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBIDDadosPessoais" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBIDEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBIDDadosEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTIDBusca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBBuscaTodos" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jBBuscaTodos" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLBotoes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBIDDadosEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBIDDadosPessoais" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBIDEndereco" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="217" max="-2" attributes="0"/>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -81,7 +88,27 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="CRM:"/>
+        <Property name="text" type="java.lang.String" value="CRM do M&#xe9;dico:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTIDBusca">
+    </Component>
+    <Component class="javax.swing.JButton" name="jBBuscaTodos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Todos os M&#xe9;dicos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLBotoes">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Visualizar:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBIDDadosEmpresa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xe3;o Empresarial"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jBIDDadosPessoais">
@@ -93,18 +120,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jBIDDadosEmpresa">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Dados Empresa"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jBBuscaTodos">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Todos os M&#xe9;dicos"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTIDRemove">
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

@@ -28,27 +28,34 @@ public class TelaBuscaMedicoV extends javax.swing.JInternalFrame {
 
         jLTitulo = new javax.swing.JLabel();
         jLIDBusca = new javax.swing.JLabel();
+        jTIDBusca = new javax.swing.JTextField();
+        jBBuscaTodos = new javax.swing.JButton();
+        jLBotoes = new javax.swing.JLabel();
+        jBIDDadosEmpresa = new javax.swing.JButton();
         jBIDDadosPessoais = new javax.swing.JButton();
         jBIDEndereco = new javax.swing.JButton();
-        jBIDDadosEmpresa = new javax.swing.JButton();
-        jBBuscaTodos = new javax.swing.JButton();
-        jTIDRemove = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+
+        setClosable(true);
+        setIconifiable(true);
 
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLTitulo.setText("Buscar Médico");
 
         jLIDBusca.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLIDBusca.setText("CRM:");
+        jLIDBusca.setText("CRM do Médico:");
+
+        jBBuscaTodos.setText("Todos os Médicos");
+
+        jLBotoes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLBotoes.setText("Visualizar:");
+
+        jBIDDadosEmpresa.setText("Informação Empresarial");
 
         jBIDDadosPessoais.setText("Dados Pessoais");
 
         jBIDEndereco.setText("Endereço");
-
-        jBIDDadosEmpresa.setText("Dados Empresa");
-
-        jBBuscaTodos.setText("Todos os Médicos");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -61,21 +68,22 @@ public class TelaBuscaMedicoV extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLBotoes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBIDDadosEmpresa)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBIDDadosPessoais, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBIDEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLTitulo)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLIDBusca)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBIDDadosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jBBuscaTodos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBIDDadosPessoais, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jBIDEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTIDBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBBuscaTodos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -83,18 +91,20 @@ public class TelaBuscaMedicoV extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jLTitulo)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLIDBusca)
-                    .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBIDDadosPessoais)
-                    .addComponent(jBIDEndereco)
-                    .addComponent(jBIDDadosEmpresa))
+                    .addComponent(jTIDBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBBuscaTodos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBBuscaTodos)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLBotoes)
+                    .addComponent(jBIDDadosEmpresa)
+                    .addComponent(jBIDDadosPessoais)
+                    .addComponent(jBIDEndereco))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -106,10 +116,11 @@ public class TelaBuscaMedicoV extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBIDDadosEmpresa;
     private javax.swing.JButton jBIDDadosPessoais;
     private javax.swing.JButton jBIDEndereco;
+    private javax.swing.JLabel jLBotoes;
     private javax.swing.JLabel jLIDBusca;
     private javax.swing.JLabel jLTitulo;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTIDRemove;
+    private javax.swing.JTextField jTIDBusca;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

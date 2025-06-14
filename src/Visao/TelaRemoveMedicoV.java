@@ -26,16 +26,19 @@ public class TelaRemoveMedicoV extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTIDRemove = new javax.swing.JTextField();
         jLTitulo = new javax.swing.JLabel();
         jLIDRemove = new javax.swing.JLabel();
+        jTIDRemove = new javax.swing.JTextField();
         jBRemover = new javax.swing.JButton();
+
+        setClosable(true);
+        setIconifiable(true);
 
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLTitulo.setText("Remover Médico");
 
         jLIDRemove.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLIDRemove.setText("ID do Médico:");
+        jLIDRemove.setText("CRM do Médico:");
 
         jBRemover.setText("Remover");
 
@@ -49,23 +52,23 @@ public class TelaRemoveMedicoV extends javax.swing.JInternalFrame {
                     .addComponent(jLTitulo)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLIDRemove)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jBRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jLTitulo)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLIDRemove)
                     .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBRemover))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();

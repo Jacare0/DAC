@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="closable" type="boolean" value="true"/>
+    <Property name="iconifiable" type="boolean" value="true"/>
+  </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
@@ -21,68 +25,68 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLIDBusca" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="jTIDBusca" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLCPF1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLNome1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLIdade1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLSexo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLDataNasc1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLTel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLEmail1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLCPF" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLIdade" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLSexo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLDataNasc" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLTel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLEmail" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jTSexo1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTDataNasc1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTTel1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTEmail1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTCPF1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTIdade1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTNome1" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="jTSexo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTDataNasc" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTTel" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTEmail" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTCPF" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTIdade" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTNome" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="jLDadosPessoais1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLIDBusca1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jTIDBusca1" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="jLTitulo" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="36" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLEndereco1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLEndereco" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLCEP1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLCEP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jTCEP1" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Component id="jTCEP" min="-2" pref="110" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLRua1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLRua" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLCidade1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLCidade" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLNum1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLNum" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTNum1" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="jTCidade1" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="jTRua1" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="jTNum" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="jTCidade" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="jTRua" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLEstados1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLEstados" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jCBEstados1" min="-2" pref="111" max="-2" attributes="0"/>
+                      <Component id="jCBEstados" min="-2" pref="111" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jBAtualizar1" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
+                  <Component id="jBAtualizar" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
           </Group>
@@ -95,37 +99,37 @@
               <Component id="jLTitulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLIDBusca1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTIDBusca1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLIDBusca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTIDBusca" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="jLEndereco1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLEndereco" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLCEP1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTCEP1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLCEP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTCEP" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLRua1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTRua1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLRua" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTRua" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLNum1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTNum1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTNum" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLCidade1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTCidade1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTCidade" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLEstados1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCBEstados1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLEstados" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jCBEstados" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -133,39 +137,39 @@
                       <Component id="jLDadosPessoais1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLNome1" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTNome1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLNome" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTNome" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLCPF1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTCPF1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTCPF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLIdade1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTIdade1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLIdade" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTIdade" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLSexo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTSexo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTSexo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLDataNasc1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTDataNasc1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLTel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTTel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLTel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTTel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLEmail1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTEmail1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBAtualizar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBAtualizar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -183,19 +187,143 @@
         <Property name="text" type="java.lang.String" value="Atualizar Paciente"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLIDBusca1">
+    <Component class="javax.swing.JLabel" name="jLIDBusca">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ID do Paciente:"/>
+        <Property name="text" type="java.lang.String" value="CPF do Paciente:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTEmail1">
+    <Component class="javax.swing.JTextField" name="jTIDBusca">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTCidade1">
+    <Component class="javax.swing.JLabel" name="jLDadosPessoais1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Dados Pessoais"/>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLEstados1">
+    <Component class="javax.swing.JLabel" name="jLNome">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Nome:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTNome">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLCPF">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="CPF:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTCPF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLIdade">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Idade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTIdade">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLSexo">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Sexo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTSexo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLDataNasc">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Data de Nascimento:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTDataNasc">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLTel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Telefone:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTTel">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLEmail">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Email:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTEmail">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLEndereco">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="16" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLCEP">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="CEP:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTCEP">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLRua">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Rua:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTRua">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLNum">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="N&#xba;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTNum">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLCidade">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cidade:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTCidade">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLEstados">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -203,9 +331,7 @@
         <Property name="text" type="java.lang.String" value="Estado:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTIDBusca1">
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jCBEstados1">
+    <Component class="javax.swing.JComboBox" name="jCBEstados">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="27">
@@ -243,131 +369,9 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLDadosPessoais1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="16" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Dados Pessoais"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLNome1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Nome:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLIdade1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Idade:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTNome1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLCPF1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="CPF:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTIdade1">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTCPF1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLEndereco1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="16" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLSexo1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Sexo:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTSexo1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLDataNasc1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Data de Nascimento:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTDataNasc1">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTCEP1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLTel1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Telefone:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLRua1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Rua:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jBAtualizar1">
+    <Component class="javax.swing.JButton" name="jBAtualizar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Atualizar"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTRua1">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTTel1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLNum1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="N&#xba;:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLEmail1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Email:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLCEP1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="CEP:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTNum1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLCidade1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Cidade:"/>
       </Properties>
     </Component>
   </SubComponents>
