@@ -9,13 +9,13 @@ package Modelo;
 
 public class FuncionariosM extends DadosPessoaisM{
     private String DataContratacaoFunc;
-    private float Salaraio;
+    private float Salario;
     private String Funcao;
 
     public FuncionariosM(String DataContratacaoFunc, float Salaraio, String Funcao, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
         super(Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Rua, NumCasa, bairro, CEP, Cidade, Estado);
         this.DataContratacaoFunc = DataContratacaoFunc;
-        this.Salaraio = Salaraio;
+        this.Salario = Salaraio;
         this.Funcao = Funcao;
     }
 
@@ -28,11 +28,11 @@ public class FuncionariosM extends DadosPessoaisM{
     }
 
     public float getSalaraio() {
-        return Salaraio;
+        return Salario;
     }
 
     public void setSalaraio(float Salaraio) {
-        this.Salaraio = Salaraio;
+        this.Salario = Salaraio;
     }
 
     public String getFuncao() {
