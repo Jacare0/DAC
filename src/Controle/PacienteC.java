@@ -6,7 +6,7 @@ package Controle;
 
 /**
  *
- * @author arthu
+ * @author arthur
  */
 public class PacienteC {
     

@@ -26,7 +26,7 @@ public class MedicoC {
      * @version v1
      * @since 07/06/2025
      * @param obj - Objeto do tipo MedicoM contendo os dados do
-     * funcionario que sera inserido.
+     * medico que sera inserido.
      */
     public void CadastraMedico(MedicoM obj) {
         try{
