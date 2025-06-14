@@ -65,7 +65,7 @@ public class TelaAtualizaMedicoV extends javax.swing.JInternalFrame {
         jBAtualizar = new javax.swing.JButton();
 
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLTitulo.setText("Atualizar Funcionário");
+        jLTitulo.setText("Atualizar Médico");
 
         jLIDBusca.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLIDBusca.setText("ID do Funcionário:");
@@ -310,7 +310,7 @@ public class TelaAtualizaMedicoV extends javax.swing.JInternalFrame {
                             .addComponent(jLEmail)
                             .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBAtualizar))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
