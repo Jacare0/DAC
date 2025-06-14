@@ -7,14 +7,13 @@
  * @since data 2/06/2025
  */
 
-
 package Modelo;
+
 public class ConsultaM {
     private String DataConsulta;
     private String HoraConsulta;
     private String Status;
     
-     
     public ConsultaM(String DataConsulta, String HoraConsulta, String Status) {
         this.DataConsulta = DataConsulta;
         this.HoraConsulta = HoraConsulta;
@@ -44,6 +43,4 @@ public class ConsultaM {
     public void setStatus(String Status) {
         this.Status = Status;
     }
-    
-    
 }

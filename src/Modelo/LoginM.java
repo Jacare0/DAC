@@ -1,11 +1,12 @@
-
-package Modelo;
 /**
  * Modelo para a tela de login
  * @author Arthur Fernandes Castanheira
  * @since 02/06/2025
  * @version v1
  */
+
+package Modelo;
+
 public class LoginM {
     private String Usuario;
     private String Senha;
@@ -16,9 +17,6 @@ public class LoginM {
         this.Senha = Senha;
         this.Tipo = Tipo;
     }
-
-
-
 
     public String getUsuario() {
         return Usuario;
@@ -42,9 +40,5 @@ public class LoginM {
 
     public void setTipo(String Tipo) {
         this.Tipo = Tipo;
-    }
-    
-    
-    
-    
+    }   
 }
