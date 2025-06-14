@@ -26,21 +26,117 @@ public class TelaBuscaPacienteV extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jBIDDadosPessoais = new javax.swing.JButton();
+        jBIDEndereco = new javax.swing.JButton();
+        jBBuscaTodos = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jTIDRemove = new javax.swing.JTextField();
+        jLTitulo = new javax.swing.JLabel();
+        jLIDBusca = new javax.swing.JLabel();
+
+        jBIDDadosPessoais.setText("Dados Pessoais");
+        jBIDDadosPessoais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBIDDadosPessoaisActionPerformed(evt);
+            }
+        });
+
+        jBIDEndereco.setText("Endereço");
+        jBIDEndereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBIDEnderecoActionPerformed(evt);
+            }
+        });
+
+        jBBuscaTodos.setText("Todos Pacientes");
+        jBBuscaTodos.setToolTipText("");
+        jBBuscaTodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBuscaTodosActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLTitulo.setText("Buscar Paciente");
+
+        jLIDBusca.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLIDBusca.setText("CPF do Paciente:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jLTitulo)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLIDBusca)
+                        .addGap(41, 41, 41)
+                        .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jBIDDadosPessoais, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(32, 32, 32)
+                                .addComponent(jBIDEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBBuscaTodos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLTitulo)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jBIDDadosPessoais)
+                            .addComponent(jBIDEndereco)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLIDBusca)
+                            .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(7, 7, 7)
+                .addComponent(jBBuscaTodos)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jBIDDadosPessoaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIDDadosPessoaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBIDDadosPessoaisActionPerformed
+
+    private void jBIDEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBIDEnderecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBIDEnderecoActionPerformed
+
+    private void jBBuscaTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscaTodosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBBuscaTodosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBBuscaTodos;
+    private javax.swing.JButton jBIDDadosPessoais;
+    private javax.swing.JButton jBIDEndereco;
+    private javax.swing.JLabel jLIDBusca;
+    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTIDRemove;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

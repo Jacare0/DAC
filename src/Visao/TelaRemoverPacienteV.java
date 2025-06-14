@@ -26,21 +26,65 @@ public class TelaRemoverPacienteV extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLTitulo = new javax.swing.JLabel();
+        jLIDRemove = new javax.swing.JLabel();
+        jTIDRemove = new javax.swing.JTextField();
+        jBRemover = new javax.swing.JButton();
+
+        jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLTitulo.setText("Remover Funcionário");
+
+        jLIDRemove.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLIDRemove.setText("ID do Funcionário:");
+
+        jBRemover.setText("Remover");
+        jBRemover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRemoverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLTitulo)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLIDRemove)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLTitulo)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLIDRemove)
+                    .addComponent(jTIDRemove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBRemover))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jBRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBRemoverActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBRemover;
+    private javax.swing.JLabel jLIDRemove;
+    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JTextField jTIDRemove;
     // End of variables declaration//GEN-END:variables
 }
