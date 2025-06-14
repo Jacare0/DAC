@@ -1,5 +1,3 @@
-package Modelo;
-
 /**
  * Esta classe serve como modelo para o Endereço onde foi criado
  * um construtor, getter e setter para Rua, NumCasa,Bairro,CEP, Cidade e Estado;
@@ -7,6 +5,9 @@ package Modelo;
  * @since data 2/06/2025
  * @version v1
  */
+
+package Modelo;
+
 public class EnderecoM {
     private String Rua;
     private int NumCasa;
@@ -71,7 +72,4 @@ public class EnderecoM {
     public void setEstado(String Estado) {
         this.Estado = Estado;
     }
-
-    
-    
 }

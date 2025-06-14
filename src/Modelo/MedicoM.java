@@ -1,10 +1,12 @@
-package Modelo;
 /**
  * Modelo para Medico com extends em DadosPessoais
  * @author Arthur Fernandes Castanheira
  * @version v1
  * @since 02/06/2025
  */
+
+package Modelo;
+
 public class MedicoM extends DadosPessoaisM{  
     private String CRM;
     private String Especialidade;
@@ -60,5 +62,4 @@ public class MedicoM extends DadosPessoaisM{
     public void setData(String Data) {
         this.Data = Data;
     }
-    
 }

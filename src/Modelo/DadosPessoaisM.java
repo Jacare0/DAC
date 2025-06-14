@@ -1,11 +1,12 @@
-
-package Modelo;
 /**
  * Modelo para os Dados pessoais com Extends no endereço.
  * @author arthur fernandes castanheira
  * @version v1 
  * @since 02/06/2025
  */
+
+package Modelo;
+
 public class DadosPessoaisM extends EnderecoM{
     private String Nome;
     private String CPF;
@@ -80,10 +81,5 @@ public class DadosPessoaisM extends EnderecoM{
 
     public void setEmail(String Email) {
         this.Email = Email;
-    }
-
-   
-    
-    
-  
+    }    
 }
