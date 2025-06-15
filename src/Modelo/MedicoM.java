@@ -7,20 +7,39 @@
 
 package Modelo;
 
-public class MedicoM extends DadosPessoaisM{  
+public class MedicoM{  
+    private int idMedico;
     private String CRM;
     private String Especialidade;
     private float Valor;
     private int NumConsulta;
     private String Data;
+    private DadosPessoaisM DadosPessoais;
 
-    public MedicoM(String CRM, String Especialidade, float Valor, int NumConsulta, String Data, int idEndereco, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
-        super(idEndereco, Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Rua, NumCasa, bairro, CEP, Cidade, Estado); // Chama o construtor de DadosPessoaisM com ID
+    public MedicoM(int idMedico, String CRM, String Especialidade, float Valor, int NumConsulta, String Data, DadosPessoaisM DadosPessoais) {
+        this.idMedico = idMedico;
         this.CRM = CRM;
         this.Especialidade = Especialidade;
         this.Valor = Valor;
         this.NumConsulta = NumConsulta;
         this.Data = Data;
+        this.DadosPessoais = DadosPessoais;
+    }
+
+    public int getIdMedico() {
+        return idMedico;
+    }
+
+    public void setIdMedico(int idMedico) {
+        this.idMedico = idMedico;
+    }
+
+    public DadosPessoaisM getDadosPessoais() {
+        return DadosPessoais;
+    }
+
+    public void setDadosPessoais(DadosPessoaisM DadosPessoais) {
+        this.DadosPessoais = DadosPessoais;
     }
 
     public String getCRM() {

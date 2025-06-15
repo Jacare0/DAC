@@ -10,7 +10,7 @@ package Modelo;
  */
 
 public class EnderecoM {
-    private int idEndereco; // Novo campo para armazenar o ID gerado
+    private int idEndereco;
     private String Rua;
     private int NumCasa;
     private String bairro;
@@ -18,23 +18,16 @@ public class EnderecoM {
     private String Cidade;
     private String Estado;
 
-    public EnderecoM(String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
+    public EnderecoM(int idEndereco, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
+        this.idEndereco = idEndereco;
         this.Rua = Rua;
         this.NumCasa = NumCasa;
         this.bairro = bairro;
         this.CEP = CEP;
         this.Cidade = Cidade;
         this.Estado = Estado;
-        this.idEndereco = 0; // Inicializa com 0 ou outro valor padrão
     }
 
-    // Construtor adicional para quando você já tem o ID (por exemplo, ao carregar do BD)
-    public EnderecoM(int idEndereco, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
-        this(Rua, NumCasa, bairro, CEP, Cidade, Estado);
-        this.idEndereco = idEndereco;
-    }
-
-    // Getter e Setter para idEndereco
     public int getIdEndereco() {
         return idEndereco;
     }
@@ -43,7 +36,6 @@ public class EnderecoM {
         this.idEndereco = idEndereco;
     }
 
-    // ... (Getters e Setters existentes para Rua, NumCasa, Bairro, CEP, Cidade, Estado) ...
     public String getRua() {
         return Rua;
     }

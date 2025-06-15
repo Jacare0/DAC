@@ -7,17 +7,19 @@
 
 package Modelo;
 
-public class DadosPessoaisM extends EnderecoM{
+public class DadosPessoaisM {
+    private int idDadosPessoais;
     private String Nome;
     private String CPF;
     private int Idade;
     private String Sexo;
     private String DataNascimento;
-    private int Telefone;
+    private String Telefone;
     private String Email;
+    private EnderecoM Endereco;
 
-    public DadosPessoaisM(int idEndereco, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
-        super(idEndereco, Rua, NumCasa, bairro, CEP, Cidade, Estado); // Chama o construtor de EnderecoM com ID
+    public DadosPessoaisM(int idDadosPessoais,String Nome, String CPF, int Idade, String Sexo, String DataNascimento, String Telefone, String Email, EnderecoM Endereco) {
+        this.idDadosPessoais = idDadosPessoais;
         this.Nome = Nome;
         this.CPF = CPF;
         this.Idade = Idade;
@@ -25,6 +27,24 @@ public class DadosPessoaisM extends EnderecoM{
         this.DataNascimento = DataNascimento;
         this.Telefone = Telefone;
         this.Email = Email;
+        this.Endereco = Endereco;
+    }
+    
+    
+    public int getIdDadosPessoais() {
+        return idDadosPessoais;
+    }
+
+    public void setIdDadosPessoais(int idDadosPessoais) {
+        this.idDadosPessoais = idDadosPessoais;
+    }
+
+    public EnderecoM getEndereco() {
+        return Endereco;
+    }
+
+    public void setEndereco(EnderecoM Endereco) {
+        this.Endereco = Endereco;
     }
 
     public String getNome() {
@@ -67,11 +87,11 @@ public class DadosPessoaisM extends EnderecoM{
         this.DataNascimento = DataNascimento;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return Telefone;
     }
 
-    public void setTelefone(int Telefone) {
+    public void setTelefone(String Telefone) {
         this.Telefone = Telefone;
     }
 

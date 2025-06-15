@@ -9,8 +9,31 @@
 package Modelo;
 
 public class PacienteM extends DadosPessoaisM{
+    
+    private int idPaciente;
+    private DadosPessoaisM DadosPessoais
 
-    public PacienteM(String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
-        super(Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Rua, NumCasa, bairro, CEP, Cidade, Estado);
+    public PacienteM(int idPaciente, DadosPessoaisM DadosPessoais, int idDadosPessoais, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, String Telefone, String Email, EnderecoM Endereco) {
+        super(idDadosPessoais, Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Endereco);
+        this.idPaciente = idPaciente;
+        this.DadosPessoais = DadosPessoais;
     }
+            
+    public int getIdPaciente() {
+        return idPaciente;
+    }
+
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
+    }
+
+    public DadosPessoaisM getDadosPessoais() {
+        return DadosPessoais;
+    }
+
+    public void setDadosPessoais(DadosPessoaisM DadosPessoais) {
+        this.DadosPessoais = DadosPessoais;
+    }
+
+
 }
