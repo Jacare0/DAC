@@ -16,8 +16,8 @@ public class DadosPessoaisM extends EnderecoM{
     private int Telefone;
     private String Email;
 
-    public DadosPessoaisM(String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
-        super(Rua, NumCasa, bairro, CEP, Cidade, Estado);
+    public DadosPessoaisM(int idEndereco, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
+        super(idEndereco, Rua, NumCasa, bairro, CEP, Cidade, Estado); // Chama o construtor de EnderecoM com ID
         this.Nome = Nome;
         this.CPF = CPF;
         this.Idade = Idade;

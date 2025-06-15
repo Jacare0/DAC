@@ -14,8 +14,8 @@ public class MedicoM extends DadosPessoaisM{
     private int NumConsulta;
     private String Data;
 
-    public MedicoM(String CRM, String Especialidade, float Valor, int NumConsulta, String Data, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
-        super(Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Rua, NumCasa, bairro, CEP, Cidade, Estado);
+    public MedicoM(String CRM, String Especialidade, float Valor, int NumConsulta, String Data, int idEndereco, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, int Telefone, String Email, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
+        super(idEndereco, Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Rua, NumCasa, bairro, CEP, Cidade, Estado); // Chama o construtor de DadosPessoaisM com ID
         this.CRM = CRM;
         this.Especialidade = Especialidade;
         this.Valor = Valor;

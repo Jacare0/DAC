@@ -1,7 +1,11 @@
 package Controle;
-import Modelo.DadosPessoaisM;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import Modelo.DadosPessoaisM;
+import Modelo.EnderecoM; 
 import java.sql.Statement;
+import java.sql.PreparedStatement; 
+
 
 /**
  * Controlador para acessar o banco de dados e inserir, deletar, atualizar e pesquisar
@@ -16,9 +20,9 @@ public class DadosPessoaisC{
     private Database dao= new Database();
     private EnderecoC enderecoControl = new EnderecoC(); // Instância de EnderecoC
 
-    /**
+ /**
      * Função para conectar no banco de dados, verificar se já tem cadastro da pessoa,
-     * se não encontrar, cadastra os dados pessoais,
+     * se não encontrar, cadastra os dados pessoais
      * e desconectar após o cadastro.
      * @author Arthur Fernandes Castanheira
      * @since 04/06/2025
@@ -26,24 +30,55 @@ public class DadosPessoaisC{
      * @param obj obj do tipo DadosPessoaisM
      */
     public void CadastraDadosPessoais(DadosPessoaisM obj) {
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
         try{
-            // Primeiro, tratar a parte do EnderecoM
-            enderecoControl.CadastraEndereco(obj); // Passa o objeto DadosPessoaisM, pois ele estende EnderecoM
+            // Primeiro, tratar a parte do EnderecoM e obter o ID gerado/existente
+            int idEndereco = enderecoControl.CadastraEndereco(obj); // Captura o ID do endereço
+            
+            if (idEndereco == -1) {
+                System.err.println("Não foi possível obter o ID do endereço. Cadastro de dados pessoais abortado.");
+                return; // Aborta o cadastro de dados pessoais se o endereço não foi inserido/encontrado
+            }
+            
+            // Opcional: Atualizar o ID do endereço no objeto DadosPessoaisM
+            // obj.setIdEndereco(idEndereco); // Se DadosPessoaisM tiver um setter para idEndereco herdado ou próprio
 
             dao.conexao();
-            String VerificaSQL = "SELECT * FROM dadospessoais WHERE cpf = '"+obj.getCPF()+"'"; // CPF deve ser String no SQL
-            Resultado = dao.getStatement().executeQuery(VerificaSQL);
+            String VerificaSQL = "SELECT * FROM dadospessoais WHERE cpf = ?";
+            pstmt = dao.getConnection().prepareStatement(VerificaSQL);
+            pstmt.setString(1, obj.getCPF());
+            rs = pstmt.executeQuery();
 
-            if(!Resultado.next()){ // Se não encontrou resultados, os dados pessoais não existem
-                String SQL = "INSERT INTO dadospessoais (nome, cpf, idade, sexo, data_nascimento, telefone, email) VALUES('"+obj.getNome()+"', '"+obj.getCPF()+"', "+obj.getIdade()+", '"+obj.getSexo()+"', '"+obj.getDataNascimento()+"', '"+obj.getTelefone()+"', '"+obj.getEmail()+"')";
-                dao.getStatement().execute(SQL);
+            if(!rs.next()){ // Se não encontrou resultados, os dados pessoais não existem
+                String SQL = "INSERT INTO dadospessoais (nome, cpf, idade, sexo, data_nascimento, telefone, email, id_endereco) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+                pstmt = dao.getConnection().prepareStatement(SQL);
+                pstmt.setString(1, obj.getNome());
+                pstmt.setString(2, obj.getCPF());
+                pstmt.setInt(3, obj.getIdade());
+                pstmt.setString(4, obj.getSexo());
+                pstmt.setString(5, obj.getDataNascimento());
+                pstmt.setString(6, obj.getTelefone());
+                pstmt.setString(7, obj.getEmail());
+                pstmt.setInt(8, idEndereco); // Usa o ID do endereço obtido
+
+                pstmt.execute();
                 System.out.println("Dados pessoais cadastrados com sucesso.");
             } else{
                 System.out.println("Dados pessoais já cadastrados para este CPF.");
             }
-            dao.desconecta();
         }catch(Exception e){
             e.printStackTrace();
+            System.err.println("Erro ao cadastrar dados pessoais: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (pstmt != null) pstmt.close();
+                dao.desconecta(); // Desconectar sempre no finally
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
     /**

@@ -1,9 +1,9 @@
 package Controle;
+import Modelo.EnderecoM;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import Modelo.EnderecoM;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 
 /**
  * Esta Classe serve para conter os metodos basicos para integrar o endereço com
@@ -18,33 +18,73 @@ public class EnderecoC {
     public ResultSet Resultado;
     private Database dao= new Database();
 
-    /**
+     /**
      * Função que acessa o banco de dados após receber um Endereço como
      * parametro onde irá inserir na tabela endereço do banco de dados.
+     * Agora retorna o ID gerado do endereço ou -1 se já existir ou erro.
      * @author Arthur Fernandes Castanheira
      * @version v1
      * @since 02/06/2025
      * @param obj - Objeto do tipo EnderecoM contendo os dados do
      * endereço que sera inserido.
+     * @return O ID (int) gerado para o endereço, ou o ID existente, ou -1 em caso de erro/já cadastrado.
      */
-    public void CadastraEndereco(EnderecoM obj) {
+    public int CadastraEndereco(EnderecoM obj) {
+        int idEnderecoGerado = -1; // Valor padrão para indicar falha ou não encontrado
+        PreparedStatement pstmt = null; // Usaremos PreparedStatement para retornar as chaves geradas
+        ResultSet rs = null;
+
         try{
             dao.conexao();
-            // Verifica se o endereço já existe
-            String verificaSQL = "SELECT * FROM endereco WHERE CEP = '"+obj.getCEP()+"' AND numero = "+obj.getNumCasa()+"";
-            Resultado = dao.getStatement().executeQuery(verificaSQL);
+            // Verifica se o endereço já existe (com base em CEP e numero)
+            String verificaSQL = "SELECT id_endereco FROM endereco WHERE CEP = ? AND numero = ?"; // Adicionei id_endereco aqui
+            pstmt = dao.getConnection().prepareStatement(verificaSQL);
+            pstmt.setString(1, obj.getCEP());
+            pstmt.setInt(2, obj.getNumCasa());
+            rs = pstmt.executeQuery();
 
-            if(!Resultado.next()){ // Se não encontrou resultados, o endereço não existe
-                String SQL = "INSERT INTO ENDERECO (rua, numero, bairro, CEP, cidade, estado) VALUES('"+obj.getRua()+"',"+obj.getNumCasa()+",'"+obj.getBairro()+"','"+obj.getCEP()+"', '"+obj.getCidade()+"', '"+obj.getEstado()+"') ";
-                dao.getStatement().execute(SQL);
-                System.out.println("Endereço cadastrado com sucesso.");
-            } else {
-                System.out.println("Endereço já cadastrado.");
+            if(rs.next()){ // Se encontrou resultados, o endereço já existe
+                idEnderecoGerado = rs.getInt("id_endereco"); // Recupera o ID existente
+                System.out.println("Endereço já cadastrado. ID existente: " + idEnderecoGerado);
+                // Pode ser útil também atualizar o objeto obj com o id existente
+                // if (obj.getIdEndereco() == 0) obj.setIdEndereco(idEnderecoGerado); // Se você adicionar um campo idEndereco no modelo
+            } else { // Se não encontrou resultados, o endereço não existe, então insere
+                String SQL_INSERT = "INSERT INTO ENDERECO (rua, numero, bairro, CEP, cidade, estado) VALUES(?, ?, ?, ?, ?, ?)";
+                // Adicionamos Statement.RETURN_GENERATED_KEYS para solicitar o ID gerado
+                pstmt = dao.getConnection().prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
+                pstmt.setString(1, obj.getRua());
+                pstmt.setInt(2, obj.getNumCasa());
+                pstmt.setString(3, obj.getBairro());
+                pstmt.setString(4, obj.getCEP());
+                pstmt.setString(5, obj.getCidade());
+                pstmt.setString(6, obj.getEstado());
+
+                int rowsAffected = pstmt.executeUpdate();
+
+                if(rowsAffected > 0){
+                    rs = pstmt.getGeneratedKeys(); // Recupera o ResultSet com as chaves geradas
+                    if(rs.next()){
+                        idEnderecoGerado = rs.getInt(1); // O primeiro (e único) ID gerado
+                        System.out.println("Endereço cadastrado com sucesso. ID gerado: " + idEnderecoGerado);
+                        // Você pode definir o ID no seu objeto modelo se ele tiver um campo para isso
+                        // obj.setIdEndereco(idEnderecoGerado);
+                    }
+                }
             }
-            dao.desconecta();
         }catch(Exception e){
             e.printStackTrace();
+            System.err.println("Erro ao cadastrar endereço: " + e.getMessage());
+            idEnderecoGerado = -1; // Indica erro
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (pstmt != null) pstmt.close();
+                dao.desconecta(); // Desconectar sempre no finally
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+        return idEnderecoGerado;
     }
     /**
      * Função para conectar com o banco de dados e fazer uma pesquisa
