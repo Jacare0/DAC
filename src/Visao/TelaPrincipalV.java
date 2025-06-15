@@ -1,6 +1,9 @@
 
 package Visao;
 
+import java.awt.Dimension;
+import javax.swing.JInternalFrame;
+
 public class TelaPrincipalV extends javax.swing.JFrame {
 
     private TelaConsultaV telaConsultas;
@@ -22,8 +25,20 @@ public class TelaPrincipalV extends javax.swing.JFrame {
             
     public TelaPrincipalV() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
     }
 
+    private void centralizaTela(JInternalFrame frame) {
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension jInternalFrameSize = frame.getSize();
+        frame.setLocation(
+                (desktopSize.width - jInternalFrameSize.width) / 2,
+                (desktopSize.height - jInternalFrameSize.height) / 2
+        );
+    }
+    
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -203,6 +218,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaConsultas == null || telaConsultas.isClosed()) {
             telaConsultas = new TelaConsultaV();
             jDesktopPane1.add(telaConsultas);
+            centralizaTela(telaConsultas);
             telaConsultas.setVisible(true);
         } 
         else {
@@ -218,6 +234,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaCadastrarPaciente == null || telaCadastrarPaciente.isClosed()) {
             telaCadastrarPaciente = new TelaCadastroPacienteV();
             jDesktopPane1.add(telaCadastrarPaciente);
+            centralizaTela(telaCadastrarPaciente);
             telaCadastrarPaciente.setVisible(true);
         } 
         else {
@@ -233,6 +250,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaBuscarPaciente == null || telaBuscarPaciente.isClosed()) {
                 telaBuscarPaciente = new TelaBuscaPacienteV();
                 jDesktopPane1.add(telaBuscarPaciente);
+                centralizaTela(telaBuscarPaciente);
                 telaBuscarPaciente.setVisible(true);
         } 
         else {
@@ -248,6 +266,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaAtualizarPaciente == null || telaAtualizarPaciente.isClosed()) {
             telaAtualizarPaciente = new TelaAtualizaPacienteV();
             jDesktopPane1.add(telaAtualizarPaciente);
+            centralizaTela(telaAtualizarPaciente);
             telaAtualizarPaciente.setVisible(true);
         }
         else {
@@ -263,6 +282,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaRemoverPaciente == null || telaRemoverPaciente.isClosed()) {
             telaRemoverPaciente = new TelaRemovePacienteV();
             jDesktopPane1.add(telaRemoverPaciente);
+            centralizaTela(telaRemoverPaciente);
             telaRemoverPaciente.setVisible(true);
         }
         else {
@@ -278,6 +298,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaCadastrarMedico == null || telaCadastrarMedico.isClosed()) {
             telaCadastrarMedico = new TelaCadastroMedicoV();
             jDesktopPane1.add(telaCadastrarMedico);
+            centralizaTela(telaCadastrarMedico);
             telaCadastrarMedico.setVisible(true);
         }
         else {
@@ -293,6 +314,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaBuscarMedico == null || telaBuscarMedico.isClosed()) {
             telaBuscarMedico = new TelaBuscaMedicoV();
             jDesktopPane1.add(telaBuscarMedico);
+            centralizaTela(telaBuscarMedico);
             telaBuscarMedico.setVisible(true);
         }
         else {
@@ -308,6 +330,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaAtualizarMedico == null || telaAtualizarMedico.isClosed()) {
             telaAtualizarMedico = new TelaAtualizaMedicoV();
             jDesktopPane1.add(telaAtualizarMedico);
+            centralizaTela(telaAtualizarMedico);
             telaAtualizarMedico.setVisible(true);
         }         
        else {
@@ -323,6 +346,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaRemoverMedico == null || telaRemoverMedico.isClosed()) {
             telaRemoverMedico = new TelaRemoveMedicoV();
             jDesktopPane1.add(telaRemoverMedico);
+            centralizaTela(telaRemoverMedico);
             telaRemoverMedico.setVisible(true);
         }    
         else {
@@ -338,6 +362,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaCadastrarFuncionario == null || telaCadastrarFuncionario.isClosed()) {
             telaCadastrarFuncionario = new TelaCadastroFuncionarioV();
             jDesktopPane1.add(telaCadastrarFuncionario);
+            centralizaTela(telaCadastrarFuncionario);
             telaCadastrarFuncionario.setVisible(true);
         }
         else {
@@ -353,6 +378,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaBuscarFuncionario == null || telaBuscarFuncionario.isClosed()) {
             telaBuscarFuncionario = new TelaBuscaFuncionarioV();
             jDesktopPane1.add(telaBuscarFuncionario);
+            centralizaTela(telaBuscarFuncionario);
             telaBuscarFuncionario.setVisible(true);
         }
         else {
@@ -368,6 +394,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaAtualizarFuncionario == null || telaAtualizarFuncionario.isClosed()) {
             telaAtualizarFuncionario = new TelaAtualizaFuncionarioV();
             jDesktopPane1.add(telaAtualizarFuncionario);
+            centralizaTela(telaAtualizarFuncionario);
             telaAtualizarFuncionario.setVisible(true);
         } 
         else {
@@ -383,6 +410,7 @@ public class TelaPrincipalV extends javax.swing.JFrame {
         if (telaRemoverFuncionario == null || telaRemoverFuncionario.isClosed()) {
             telaRemoverFuncionario = new TelaRemoveFuncionarioV();
             jDesktopPane1.add(telaRemoverFuncionario);
+            centralizaTela(telaRemoverFuncionario);
             telaRemoverFuncionario.setVisible(true);
         }
         else {
@@ -395,31 +423,6 @@ public class TelaPrincipalV extends javax.swing.JFrame {
     }//GEN-LAST:event_AbrirTelaRemoverFuncionario
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipalV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipalV().setVisible(true);

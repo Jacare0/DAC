@@ -32,7 +32,7 @@ public class Database {
        {
         Class.forName("org.postgresql.Driver");
         conn = DriverManager.getConnection(
-               "jdbc:postgresql://localhost:5432/paradigmas","postgres", "123");
+               "jdbc:postgresql://localhost:5432/DAC","postgres", "1235");
         System.out.println("Conectado ao PostGreSQL.");        
         }catch(Exception e){
             System.out.println("Falha ao tentar a conexão");

@@ -13,16 +13,16 @@ public class EnderecoM {
     private int idEndereco;
     private String Rua;
     private int NumCasa;
-    private String bairro;
+    private String Bairro;
     private String CEP;
     private String Cidade;
     private String Estado;
 
-    public EnderecoM(int idEndereco, String Rua, int NumCasa, String bairro, String CEP, String Cidade, String Estado) {
+    public EnderecoM(int idEndereco, String Rua, int NumCasa, String Bairro, String CEP, String Cidade, String Estado) {
         this.idEndereco = idEndereco;
         this.Rua = Rua;
         this.NumCasa = NumCasa;
-        this.bairro = bairro;
+        this.Bairro = Bairro;
         this.CEP = CEP;
         this.Cidade = Cidade;
         this.Estado = Estado;
@@ -53,11 +53,11 @@ public class EnderecoM {
     }
 
     public String getBairro() {
-        return bairro;
+        return Bairro;
     }
 
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
+    public void setBairro(String Bairro) {
+        this.Bairro = Bairro;
     }
 
     public String getCEP() {

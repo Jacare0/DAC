@@ -8,13 +8,12 @@
 
 package Modelo;
 
-public class PacienteM extends DadosPessoaisM{
+public class PacienteM{
     
     private int idPaciente;
-    private DadosPessoaisM DadosPessoais
+    private DadosPessoaisM DadosPessoais;
 
-    public PacienteM(int idPaciente, DadosPessoaisM DadosPessoais, int idDadosPessoais, String Nome, String CPF, int Idade, String Sexo, String DataNascimento, String Telefone, String Email, EnderecoM Endereco) {
-        super(idDadosPessoais, Nome, CPF, Idade, Sexo, DataNascimento, Telefone, Email, Endereco);
+    public PacienteM(int idPaciente, DadosPessoaisM DadosPessoais) {
         this.idPaciente = idPaciente;
         this.DadosPessoais = DadosPessoais;
     }

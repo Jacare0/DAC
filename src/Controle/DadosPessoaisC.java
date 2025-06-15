@@ -17,9 +17,9 @@ import java.sql.PreparedStatement;
 public class DadosPessoaisC{
     public Statement stmt;
     public ResultSet Resultado;
-    private Database dao= new Database();
-    private EnderecoC enderecoControl = new EnderecoC(); // Instância de EnderecoC
-
+    private Database dao = new Database();
+    private EnderecoC EC1 = new EnderecoC();
+    
  /**
      * Função para conectar no banco de dados, verificar se já tem cadastro da pessoa,
      * se não encontrar, cadastra os dados pessoais
@@ -29,58 +29,41 @@ public class DadosPessoaisC{
      * @version v1
      * @param obj obj do tipo DadosPessoaisM
      */
-    public void CadastraDadosPessoais(DadosPessoaisM obj) {
-        PreparedStatement pstmt = null;
-        ResultSet rs = null;
-
+    public int CadastraDadosPessoais(DadosPessoaisM obj) {
         try{
-            // Primeiro, tratar a parte do EnderecoM e obter o ID gerado/existente
-            int idEndereco = enderecoControl.CadastraEndereco(obj); // Captura o ID do endereço
+            
+            int idEndereco = EC1.CadastraEndereco(obj.getEndereco());
             
             if (idEndereco == -1) {
                 System.err.println("Não foi possível obter o ID do endereço. Cadastro de dados pessoais abortado.");
-                return; // Aborta o cadastro de dados pessoais se o endereço não foi inserido/encontrado
+                return -1;
             }
             
-            // Opcional: Atualizar o ID do endereço no objeto DadosPessoaisM
-            // obj.setIdEndereco(idEndereco); // Se DadosPessoaisM tiver um setter para idEndereco herdado ou próprio
-
             dao.conexao();
-            String VerificaSQL = "SELECT * FROM dadospessoais WHERE cpf = ?";
-            pstmt = dao.getConnection().prepareStatement(VerificaSQL);
-            pstmt.setString(1, obj.getCPF());
-            rs = pstmt.executeQuery();
+            
+            String VerificaSQL = "SELECT * FROM DadosPessoais WHERE cpf ='" + obj.getCPF() + "';";
+            
+            Resultado = dao.getStatement().executeQuery(VerificaSQL);
 
-            if(!rs.next()){ // Se não encontrou resultados, os dados pessoais não existem
-                String SQL = "INSERT INTO dadospessoais (nome, cpf, idade, sexo, data_nascimento, telefone, email, id_endereco) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-                pstmt = dao.getConnection().prepareStatement(SQL);
-                pstmt.setString(1, obj.getNome());
-                pstmt.setString(2, obj.getCPF());
-                pstmt.setInt(3, obj.getIdade());
-                pstmt.setString(4, obj.getSexo());
-                pstmt.setString(5, obj.getDataNascimento());
-                pstmt.setString(6, obj.getTelefone());
-                pstmt.setString(7, obj.getEmail());
-                pstmt.setInt(8, idEndereco); // Usa o ID do endereço obtido
-
-                pstmt.execute();
+            if(!Resultado.next()){ 
+                String SQL = "INSERT INTO DadosPessoais  VALUES (" + obj.getIdDadosPessoais() +",'" + obj.getNome() + "','" + obj.getCPF() + "'," + obj.getIdade() + ",'" 
+                              + obj.getSexo() + "','" + obj.getDataNascimento() + "','" + obj.getTelefone() + "','" + obj.getEmail()
+                              + "');";
                 System.out.println("Dados pessoais cadastrados com sucesso.");
+                
+                return obj.getIdDadosPessoais();
             } else{
                 System.out.println("Dados pessoais já cadastrados para este CPF.");
+                return Resultado.getInt(1);
             }
-        }catch(Exception e){
+        } catch (Exception e){
             e.printStackTrace();
             System.err.println("Erro ao cadastrar dados pessoais: " + e.getMessage());
-        } finally {
-            try {
-                if (rs != null) rs.close();
-                if (pstmt != null) pstmt.close();
-                dao.desconecta(); // Desconectar sempre no finally
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
+        } 
+        
+        return -1;
     }
+    
     /**
      * Função para pesquisar e retornar todos os dados pessoais cadastrados.
      * @author Arthur Fernandes Castanheira
@@ -94,7 +77,7 @@ public class DadosPessoaisC{
             dao.conexao();
             String SQL = "SELECT * FROM dadospessoais";
             Resultado = dao.getStatement().executeQuery(SQL);
-            // dao.desconecta(); // Manter conexão aberta se o ResultSet for usado fora
+            dao.desconecta();
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -116,14 +99,13 @@ public class DadosPessoaisC{
             dao.conexao();
             String SQL = "SELECT * FROM dadospessoais WHERE CPF = '"+CPF+"'";
             Resultado = dao.getStatement().executeQuery(SQL);
-            // dao.desconecta(); // Manter conexão aberta se o ResultSet for usado fora
+            dao.desconecta();
         }catch(Exception e){
             e.printStackTrace();
         }
         return Resultado;
     }
-
-
+    
       /**
      * Função para conectar no banco de dados e
      * deletar um dado pessoal utilizando um CPF passado pelo
@@ -136,39 +118,26 @@ public class DadosPessoaisC{
      */
     public void DeletaDadosPessoais(String CPF){
         try{
-            // Antes de deletar os dados pessoais, precisamos do endereço associado a eles.
-            // Buscar o endereço associado ao CPF.
-            String rua = null;
-            int numCasa = 0;
-            String cep = null;
-
             dao.conexao();
-            String buscaEnderecoSql = "SELECT rua, numero, cep FROM endereco e JOIN dadospessoais dp ON e.cep = dp.cep AND e.numero = dp.numero WHERE dp.cpf = '"+CPF+"'";
-            ResultSet rsEndereco = dao.getStatement().executeQuery(buscaEnderecoSql);
-
-            if(rsEndereco.next()){
-                rua = rsEndereco.getString("rua");
-                numCasa = rsEndereco.getInt("numero");
-                cep = rsEndereco.getString("cep");
-            }
-            rsEndereco.close();
-            dao.desconecta(); // Desconecta após a busca de endereço
-
-            // Primeiro, deleta os dados pessoais
-            dao.conexao();
-            String SQL_delete_dp = "DELETE FROM dadospessoais WHERE cpf = '"+CPF+"'";
-            dao.getStatement().execute(SQL_delete_dp);
+            String SQL = "SELECT idEndereco FROM DadosPessoais WHERE cpf = "+CPF+";";
+            Resultado = dao.getStatement().executeQuery(SQL);
+            
+            int idEndereco = Resultado.getInt(0);
+            
+            SQL = "DELETE FROM dadospessoais WHERE cpf = '"+CPF+"'";
+            dao.getStatement().execute(SQL);
+            
             System.out.println("Dados pessoais deletados para o CPF: " + CPF);
-            dao.desconecta();
-
-            // Em seguida, tenta deletar o endereço associado
-            if (rua != null && cep != null) {
-                enderecoControl.DeletaEndereco(numCasa, cep); // Chamar o método correto com numCasa e CEP
-                System.out.println("Endereço associado deletado para CEP: " + cep + ", Número: " + numCasa);
-            } else {
-                System.out.println("Endereço associado não encontrado para o CPF: " + CPF + " ou já foi deletado.");
+            
+            SQL = "SELECT * FROM DADOSPESSOAIS WHERE idEndereco = " + idEndereco + ";";
+            Resultado = dao.getStatement().executeQuery(SQL);
+            if(!Resultado.next()){
+                SQL = "SELECT numCasa, CEP FROM ENDERECO WHERE idEndereco =" + idEndereco + ";";
+                Resultado = dao.getStatement().executeQuery(SQL);
+                EC1.DeletaEndereco(Resultado.getInt("numCasa"), Resultado.getString("CEP"));
             }
-
+            
+            dao.desconecta();
         }catch(Exception erro){
             erro.printStackTrace();
             System.err.println("Erro ao deletar dados pessoais e seu endereço associado para o CPF: " + CPF);

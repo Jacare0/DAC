@@ -1,19 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Controle;
-
-import Modelo.LoginM;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 /**
  * Classe controlador para Login
  * @author arthur Fernandes Castanheira
  * @since 07/06/2025
  * @version v1
  */
+
+package Controle;
+
+import Modelo.LoginM;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class LoginC {
     public Statement stmt;
     public ResultSet Resultado;
@@ -58,6 +55,31 @@ public class LoginC {
             e.printStackTrace();
         }
         return Resultado;
+    }
+    
+     /**
+     * Função para conectar com o banco de dados e validar o login e 
+     * a senha de um usuário.
+     * @autor Gabriel Danieli
+     * @since 14/06/2025
+     * @version v1
+     * @return uma validacao(do tipo boolean) permitindo ou negando
+     * o login.
+     */
+    public boolean Autenticar(LoginM obj){
+        boolean validacao = false;
+        try{
+            dao.conexao();
+            String SQL = "SELECT * FROM login WHERE usuario = '" + obj.getUsuario() + "' AND senha = '" + obj.getSenha() + "';";
+            Resultado = dao.getStatement().executeQuery(SQL);
+            validacao = Resultado.next();
+            dao.desconecta();
+            
+        }catch(Exception err){
+            err.printStackTrace();
+        }
+        
+        return validacao;
     }
     
      /**

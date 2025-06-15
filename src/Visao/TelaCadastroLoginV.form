@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -33,7 +33,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jBCadastrar" min="-2" pref="115" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="jLUsuario" pref="68" max="32767" attributes="0"/>
@@ -41,8 +41,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTSenha" pref="200" max="32767" attributes="0"/>
-                              <Component id="jTUsuario" max="32767" attributes="0"/>
+                              <Component id="jTUsuario" pref="200" max="32767" attributes="0"/>
+                              <Component id="jPFSenha" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                       </Group>
@@ -66,10 +66,10 @@
                   <Component id="jLUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jTUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLSenha" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPFSenha" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -104,11 +104,6 @@
         <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTSenha">
-      <Properties>
-        <Property name="columns" type="int" value="10"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLTipo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -137,6 +132,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastrarLogin"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLTitulo">
       <Properties>
@@ -145,6 +143,8 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar Login"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="jPFSenha">
     </Component>
   </SubComponents>
 </Form>

@@ -9,14 +9,14 @@ package Modelo;
 
 public class FuncionariosM{
     private int idFuncionario;
-    private String DataContratacaoFunc;
+    private String DataContratacao;
     private float Salario;
     private String Funcao;
     private DadosPessoaisM DadosPessoais;
 
-    public FuncionariosM(int idFuncionario, String DataContratacaoFunc, float Salario, String Funcao, DadosPessoaisM DadosPessoais) {
+    public FuncionariosM(int idFuncionario, String DataContratacao, float Salario, String Funcao, DadosPessoaisM DadosPessoais) {
         this.idFuncionario = idFuncionario;
-        this.DataContratacaoFunc = DataContratacaoFunc;
+        this.DataContratacao = DataContratacao;
         this.Salario = Salario;
         this.Funcao = Funcao;
         this.DadosPessoais = DadosPessoais;
@@ -46,12 +46,12 @@ public class FuncionariosM{
         this.DadosPessoais = DadosPessoais;
     }
 
-    public String getDataContratacaoFunc() {
-        return DataContratacaoFunc;
+    public String getDataContratacao() {
+        return DataContratacao;
     }
 
-    public void setDataContratacaoFunc(String DataContratacaoFunc) {
-        this.DataContratacaoFunc = DataContratacaoFunc;
+    public void setDataContratacao(String DataContratacao) {
+        this.DataContratacao = DataContratacao;
     }
 
     public String getFuncao() {

@@ -35,7 +35,7 @@ public class TelaRemovePacienteV extends javax.swing.JInternalFrame {
         setIconifiable(true);
 
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLTitulo.setText("Remover Funcionário");
+        jLTitulo.setText("Remover Paciente");
 
         jLIDRemove.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLIDRemove.setText("CPF do Paciente:");

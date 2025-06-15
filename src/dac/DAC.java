@@ -1,14 +1,15 @@
 
 package dac;
 
-import Visao.TelaPrincipalV;
+import Visao.TelaLoginV;
 
 public class DAC {
     public static void main(String[] args) {
-        TelaPrincipalV telaPrincipal;
-        telaPrincipal = new TelaPrincipalV();
+        TelaLoginV telaInicial;
+        telaInicial = new TelaLoginV();
+        telaInicial.setLocationRelativeTo(null);
         
-        telaPrincipal.setVisible(true);
+        telaInicial.setVisible(true);
              
     } 
 }

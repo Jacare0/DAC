@@ -11,10 +11,9 @@ import java.sql.Statement;
  * @since 06/06/2025
  */
 public class FuncionariosC {
-    public Statement stmt;
     public ResultSet Resultado;
-    private Database dao= new Database();
-    private DadosPessoaisC dadosPessoaisControl = new DadosPessoaisC(); // Instância de DadosPessoaisC
+    private Database dao = new Database();
+    private DadosPessoaisC DPC = new DadosPessoaisC(); 
 
     /**
      * Função que acessa o banco de dados após receber um funcionário como
@@ -27,25 +26,32 @@ public class FuncionariosC {
      */
     public void CadastraFuncionarios(FuncionariosM obj) {
         try{
-            // Primeiro, tratar a parte do DadosPessoaisM (que inclui EnderecoM)
-            dadosPessoaisControl.CadastraDadosPessoais(obj); // Passa o objeto FuncionariosM, pois ele estende DadosPessoaisM
-
+            int idDadosPessoais = DPC.CadastraDadosPessoais(obj.getDadosPessoais());
+            
+            if(idDadosPessoais == -1){
+                System.err.println("Não foi possível obter o ID dos DadosPessoais. Cadastro de funcionario abortado.");
+                return;
+            }
+            
             dao.conexao();
-            String verificaSQL = "SELECT * FROM funcionarios WHERE cpf = '"+obj.getCPF()+"'";
+            
+            String verificaSQL = " SELECT * FROM funcionarios WHERE idfunc =" + obj.getIdFuncionario() + ";";
             Resultado = dao.getStatement().executeQuery(verificaSQL);
 
-            if(!Resultado.next()){ // Se não encontrou resultados, o funcionário não existe
-                String SQL = "INSERT INTO funcionarios (cpf, data_contratacao, salario, funcao) VALUES('"+obj.getCPF()+"', '"+obj.getDataContratacaoFunc()+"', "+obj.getSalaraio()+", '"+obj.getFuncao()+"') "; // Adicionado CPF no insert
+            if(!Resultado.next()){ 
+                String SQL = "INSERT INTO funcionarios VALUES (" + obj.getIdFuncionario() + "," + obj.getDadosPessoais().getIdDadosPessoais() + 
+                             ",'" + obj.getDataContratacao() + "'," + obj.getSalario() + ",'" + obj.getFuncao() +"');"; 
                 dao.getStatement().execute(SQL);
                 System.out.println("Funcionário cadastrado com sucesso.");
             } else {
-                System.out.println("Funcionário já cadastrado com este CPF.");
+                System.out.println("Funcionário já cadastrado com este ID.");
             }
             dao.desconecta();
         }catch(Exception e){
             e.printStackTrace();
         }
     }
+    
     /**
      * Função para conectar com o banco de dados e fazer uma pesquisa
      * de tudo da tabela funcionarios e desconectar do banco de dados após
@@ -86,7 +92,7 @@ public class FuncionariosC {
             dao.desconecta();
 
             // Em seguida, deleta os dados pessoais (que por sua vez deletará o endereço, se configurado com CASCADE ou se DadosPessoaisC lidar com isso)
-            dadosPessoaisControl.DeletaDadosPessoais(cpf);
+            DPC.DeletaDadosPessoais(cpf);
             System.out.println("Dados pessoais associados deletados.");
 
         }catch(Exception erro){

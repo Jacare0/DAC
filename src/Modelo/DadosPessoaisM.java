@@ -29,8 +29,7 @@ public class DadosPessoaisM {
         this.Email = Email;
         this.Endereco = Endereco;
     }
-    
-    
+      
     public int getIdDadosPessoais() {
         return idDadosPessoais;
     }
